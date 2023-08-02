@@ -10,10 +10,9 @@ date: 2023-08-02
 
 By default, adding your `API_KEY` will automatically send a registration event to Catalyst’s backend so we know you use exists and logged into your application.
 
-<aside>
-⚠️ In order to effectively use the features of Catalyst though, it is important you identify you user using `CatalystSDK.identify()` and identify them using your own internal user ID. This will be vital when integrating additional features.
 
-</aside>
+> ⚠️ In order to effectively use the features of Catalyst though, it is important you identify you user using `CatalystSDK.identify()` and identify them using your own internal user ID. This will be vital when integrating additional features.
+
 
 ### Identify
 
@@ -30,6 +29,7 @@ CatalystSDK.Instance.Identify("USER_UNIQUE_ID", new Dictionary<string, object>{
 Ideally, you should only capture this once. For example, once a user successfully registered and verifies their email address, you can fire this event once.
 
 If you can’t avoid firing this frequently (like at app cold launch), then it is ok. We will still track the user for you.
+
 
 ### Custom Capture
 
@@ -55,6 +55,7 @@ Suggestions on how to use this:
 
 In general it is important to capture key events around Monetization and Engagement using the `Capture` method. The `PageView` method will help you capture Retention metrics/KPIs. This will be ultimately useful for tracking LTV.
 
+
 ### Alias
 
 Create an alias, which Catalyst will use to link two user ID’s going forward (not retroactively). Multiple aliases can map to the same USER_UNIQUE_ID, but not vice-versa.
@@ -66,6 +67,7 @@ CatalystSDK.Instance.Alias("USER_UNIQUE_ID", "ALIAS_ID");
 The context for using this is if you user has multiple identifiers you wish to leverage later for analytics or Catalyst feature purposes. For example, once you’ve used the `Identify()` method, you later might capture a user’s Twitter handle. If you wish to track this later, simply provide their unique user ID you used for `Identify()` as the first parameter, and the secondary identifier in the second parameter.
 
 Like `Identify()`, this only needs to be fired once.
+
 
 ### ScreenView
 
