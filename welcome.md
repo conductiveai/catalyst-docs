@@ -5,14 +5,13 @@ layout: default
 order: 10
 date: 2023-08-02
 ---
-![](https://github.com/conductiveai/conductive-unity-sdk/blob/main/.github/banner.png?raw=true)
+![](https://github.com/conductiveai/catalyst-unity-sdk/blob/main/.github/banner.png?raw=true)
 
 # Overview
 
 Welcome to the official documentation of the Conductive Catalyst SDK 👋.
 
 The goal of this document is to provide a brief overview on how to get started with our SDK.
-
 
 ### What is Catalyst
 
