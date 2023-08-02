@@ -1,5 +1,4 @@
 ---
-title: Overview
 route: /
 tags: ['welcome', 'intro', 'help']
 layout: default
@@ -7,6 +6,8 @@ order: 10
 date: 2023-08-02
 ---
 ![](https://github.com/conductiveai/conductive-unity-sdk/blob/main/.github/banner.png?raw=true)
+
+# Overview
 
 Welcome to the official documentation of the Conductive Catalyst SDK 👋.
 
