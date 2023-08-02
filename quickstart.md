@@ -23,11 +23,11 @@ You can follow our [quick installation guide in our public Github repository](ht
 
 You will first want to acquire an API key by visiting the dashboard https://app.conductive.ai and selecting the settings icon at the bottom and then “Settings”
 
-![Untitled](https://github.com/conductiveai/conductive-unity-sdk/blob/main/.github/settings.png?raw=true)
+![](https://github.com/conductiveai/conductive-unity-sdk/blob/main/.github/settings.png?raw=true)
 
 This should take you to the project settings below, copy your API key provided for your project.
 
-![Untitled](https://github.com/conductiveai/conductive-unity-sdk/blob/main/.github/settings2.png?raw=true)
+![](https://github.com/conductiveai/conductive-unity-sdk/blob/main/.github/settings2.png?raw=true)
 
 ### Installing the Unity SDK
 
@@ -40,18 +40,18 @@ This should take you to the project settings below, copy your API key provided f
     2. In the ➕ button, go to **Add package from disk**
     3. Select the zip file, that you download from GitHub.
 
-![Untitled](https://github.com/conductiveai/conductive-unity-sdk/blob/main/.github/step1.png?raw=true)
+![](https://github.com/conductiveai/conductive-unity-sdk/blob/main/.github/step1.png?raw=true)
 
-![Untitled](https://github.com/conductiveai/conductive-unity-sdk/blob/main/.github/step2.png?raw=true)
+![](https://github.com/conductiveai/conductive-unity-sdk/blob/main/.github/step2.png?raw=true)
 
-![Untitled](https://github.com/conductiveai/conductive-unity-sdk/blob/main/.github/step3.png?raw=true)
+![](https://github.com/conductiveai/conductive-unity-sdk/blob/main/.github/step3.png?raw=true)
 
 ## Integration in Unity
 
 1. In packages list, go to go to **Packages > ConductiveUnitySdk > Prefab**
 2. Drag ConductiveSDK prefab to your project's loading scene or first scene
     
-    ![Untitled](https://github.com/conductiveai/conductive-unity-sdk/blob/main/.github/add-game-object.png?raw=true)
+    ![](https://github.com/conductiveai/conductive-unity-sdk/blob/main/.github/add-game-object.png?raw=true)
     
 3. Fill in the `API_KEY` field in the ConductiveSDK prefab using the api key you acquired earlier.
 

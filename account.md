@@ -17,11 +17,11 @@ A project will automatically be setup for you, just simply retrieve your API key
 
 You will first want to acquire an API key by visiting the dashboard https://app.conductive.ai and selecting the settings icon at the bottom and then “Settings”
 
-![Untitled](https://github.com/conductiveai/conductive-unity-sdk/blob/main/.github/settings.png?raw=true)
+![](https://github.com/conductiveai/conductive-unity-sdk/blob/main/.github/settings.png?raw=true)
 
 This should take you to the project settings below, copy your API key provided for your project.
 
-![Untitled](https://github.com/conductiveai/conductive-unity-sdk/blob/main/.github/settings2.png?raw=true)
+![](https://github.com/conductiveai/conductive-unity-sdk/blob/main/.github/settings2.png?raw=true)
 
 Now that you have your API key, you can continue to installing the SDK remotely or locally. 
 
