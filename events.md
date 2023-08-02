@@ -10,8 +10,9 @@ date: 2023-08-02
 
 By default, adding your `API_KEY` will automatically send a registration event to Catalyst’s backend so we know you use exists and logged into your application.
 
-
-> ⚠️ In order to effectively use the features of Catalyst though, it is important you identify you user using `CatalystSDK.identify()` and identify them using your own internal user ID. This will be vital when integrating additional features.
+!!! :warning:
+In order to effectively use the features of Catalyst though, it is important you identify you user using `CatalystSDK.identify()` and identify them using your own internal user ID. This will be vital when integrating additional features.
+!!!
 
 
 ### Identify

@@ -1,3 +1,8 @@
+meta:
+  title: " | Conductive Catalyst SDK"
+integrations:
+  googleAnalytics:
+    id: G-T49GMC3W87
 input: .
 output: .retype
 favicon: icon.png
