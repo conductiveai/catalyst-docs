@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744308960357">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744313370247">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -31,11 +31,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../icon.png" rel="icon">
-    <link href="../resources/css/retype.css?v=3.1.0.744308960357" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.1.0.744313370247" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.744308960357" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.744313370247" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.744308960357" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.744313370247" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -180,27 +180,21 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="troubleshooting-the-sdk" class="break-words">
+<doc-anchor-target id="mac-m1" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshooting-the-sdk">#</doc-anchor-trigger>
-        <span>Troubleshooting the SDK</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mac-m1">#</doc-anchor-trigger>
+        <span>Mac M1</span>
     </h1>
 </doc-anchor-target>
 <div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350 items-center">
     <div class="flex items-center shrink-0">Published&nbsp;<span>2023-08-02</span></div>
 </div>
 
-<doc-anchor-target id="mac-m1">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#mac-m1">#</doc-anchor-trigger>
-        <span>Mac M1</span>
-    </h3>
-</doc-anchor-target>
 <doc-anchor-target id="building-for-ios--xcode">
-    <h3>
+    <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#building-for-ios--xcode">#</doc-anchor-trigger>
         <span><strong>Building for iOS / XCode</strong></span>
-    </h3>
+    </h2>
 </doc-anchor-target>
 <ul>
 <li>If you’re receiving a CocoaPods error e.g. <code v-pre>...ruby/2.6.0/gems/ffi-1.15.5/lib/ffi_c.bundle' (mach-o file, but is an incompatible architecture (have 'arm64', need 'x86_64')),</code></li>
@@ -208,42 +202,32 @@
 <li>Make sure you have Developer Mode enabled on your iOS device, Settings → Privacy → Developer mode → on</li>
 <li>Do the following:</li>
 </ul>
-<p>&#x60;# install llvm
-arch -arm64 brew install llvm
+<p>Install llvm</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">arch -arm64 brew install llvm
 export LDFLAGS=&quot;-L/opt/homebrew/opt/llvm/lib&quot;
-export CPPFLAGS=&quot;-I/opt/homebrew/opt/llvm/include&quot;</p>
-<doc-anchor-target id="uninstall-ffi" class="break-words">
-    <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#uninstall-ffi">#</doc-anchor-trigger>
-        <span>uninstall ffi</span>
-    </h1>
-</doc-anchor-target>
-<p>sudo gem uninstall ffi</p>
-<doc-anchor-target id="if-prompted-uninstall-all-versions">
-    <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#if-prompted-uninstall-all-versions">#</doc-anchor-trigger>
-        <span>if prompted, uninstall ALL versions</span>
-    </h1>
-</doc-anchor-target>
-<doc-anchor-target id="install-ffi-gem-for-x86_64">
-    <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#install-ffi-gem-for-x86_64">#</doc-anchor-trigger>
-        <span>install ffi gem for x86_64</span>
-    </h1>
-</doc-anchor-target>
-<p>sudo arch -x86_64 gem install ffi&#x60;</p>
+export CPPFLAGS=&quot;-I/opt/homebrew/opt/llvm/include&quot;</code></pre>
+</doc-codeblock></div>
+<p>Uninstall ffi</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">sudo gem uninstall ffi</code></pre>
+</doc-codeblock></div>
+<p>If prompted, uninstall ALL versions. install ffi gem for x86_64</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-none"><code v-pre class="language-none">sudo arch -x86_64 gem install ffi`</code></pre>
+</doc-codeblock></div>
 <ul>
 <li>Reference: <a href="https://stackoverflow.com/questions/66644365/cocoapods-on-m1-apple-silicon-fails-with-ffi-wrong-architecture">https://stackoverflow.com/questions/66644365/cocoapods-on-m1-apple-silicon-fails-with-ffi-wrong-architecture</a></li>
 </ul>
-<doc-anchor-target id="trouble-building-for-ios">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#trouble-building-for-ios">#</doc-anchor-trigger>
-        <span>Trouble building for iOS</span>
-    </h3>
+<doc-anchor-target id="issues-building-for-ios">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#issues-building-for-ios">#</doc-anchor-trigger>
+        <span>Issues building for iOS</span>
+    </h2>
 </doc-anchor-target>
 <ul>
-<li>Be sure to disable bitcode</li>
-<li>Be sure to remove Quoted Include in Framework Header to no</li>
+<li>Be sure to disable <code v-pre>bitcode</code></li>
+<li>Be sure to remove <code v-pre>Quoted Include</code> in Framework Header to no</li>
 </ul>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
