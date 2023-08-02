@@ -1,7 +1,8 @@
 input: .
 output: .retype
 favicon: icon.png
-url: https://catalyst.conductive.ai
+#url: https://catalyst.conductive.ai
+url: https://conductiveai.github.io/catalyst-docs/
 cname: catalyst.conductive.ai
 
 editor:
