@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://catalyst.conductive.ai/sitemap.xml.gz
+Sitemap: https://conductiveai.github.io/catalyst-docs/sitemap.xml.gz
