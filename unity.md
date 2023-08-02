@@ -50,7 +50,7 @@ This should take you to the project settings below, copy your API key provided f
 
 ![](https://github.com/conductiveai/conductive-unity-sdk/blob/main/.github/step3.png?raw=true)
 
-## Integration in Unity
+### Integration in Unity
 
 1. In packages list, go to go to **Packages > CatalystSDK > Prefab**
 2. Drag *CatalystSDK prefab* to your project's loading scene or first scene
