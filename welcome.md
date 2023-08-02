@@ -1,6 +1,6 @@
 ---
 title: Overview
-route: /welcome
+route: /
 tags: ['welcome', 'intro', 'help']
 layout: default
 order: 10
