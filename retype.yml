@@ -1,0 +1,22 @@
+input: .
+output: .retype
+favicon: icon.png
+url: https://catalyst.conductive.ai
+cname: catalyst.conductive.ai
+
+editor:
+  repo: "https://github.com/conductiveai/catalyst-docs"
+  enabled: true
+branding:
+  logo: logo.png
+  logoDark: logo-dark.png
+links:
+
+- text: Documentation
+  link: https://catalyst.conductive.ai
+- text: Github Repo
+  link: https://github.com/conductiveai/catalyst-sdk
+- text: Conductive.ai
+  link: https://conductive.ai
+footer:
+  copyright: "&copy; Copyright Conductive.ai {{ year }}. All rights reserved."
