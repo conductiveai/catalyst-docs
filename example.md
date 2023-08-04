@@ -6,11 +6,11 @@ layout: default
 order: 4
 date: 2023-08-02
 ---
-# Events example
+# Event example
 
 ### Manually capturing events
 
-Here's an example code snippet that shows how to use the `CatalystSDK` in your game code
+Here's an example code snippet that shows how to use the `CatalystSDK` in your game's code
 
 ```csharp
 public class GameClassSomething : MonoSingleton {

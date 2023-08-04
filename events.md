@@ -6,18 +6,18 @@ layout: default
 order: 5
 date: 2023-08-02
 ---
-# Sending events
+# Sending Events in Catalyst
 
-By default, adding your `API_KEY` will automatically send a registration event to Catalyst’s backend so we know you use exists and logged into your application.
+By default, adding your `API_KEY` will automatically send a registration event to Catalyst’s backend and record when users have logged into your application.
 
 !!! :warning:
-In order to effectively use the features of Catalyst though, it is important you identify you user using `CatalystSDK.identify()` and identify them using your own internal user ID. This will be vital when integrating additional features.
+In order to effectively use the features of Catalyst, it is important to identify your users using `CatalystSDK.identify()` and label them using your own internal user ID. This will be vital when integrating additional features.
 !!!
 
 
 ### Identify
 
-Identify a user with your application/games unique internal ID instead of a Catalyst. If not provided, Catalyst will generate a random but unique identifier. If this method is never called, then unique visitors will be identified by a randomly generated UUID generated the first time they launch your application.
+You can identify a user with your application or game's unique internal ID instead of with Catalyst. If not provided, Catalyst will generate a random but unique identifier. If this method is never called, then unique visitors will be identified by a randomly generated UUID generated the first time they launch your application.
 
 ```csharp
 CatalystSDK.Instance.Identify("USER_UNIQUE_ID", new Dictionary<string, object>{
@@ -27,16 +27,16 @@ CatalystSDK.Instance.Identify("USER_UNIQUE_ID", new Dictionary<string, object>{
 });
 ```
 
-Ideally, you should only capture this once. For example, once a user successfully registered and verifies their email address, you can fire this event once.
+Ideally, you should only capture this once. For example, once a user successfully registers and verifies their email address, you can fire this event once.
 
-If you can’t avoid firing this frequently (like at app cold launch), then it is ok. We will still track the user for you.
+If you can’t avoid firing this frequently (like at app cold launch), don't worry — we'll still track the user for you.
 
 
 ### Custom Capture
 
-Captures a custom event. This Catalyst function allows you to capture additional events in the game. You do not need to use Capture to capture daily logins as we will do this for you.
+Captures a custom event. This Catalyst function allows you to capture additional events in the game. You do not need to use this to capture daily logins, as we will do this for you.
 
-At a high-level, this is useful if you wish to build user funnels and understand the effectiveness of a feature. Parameters are provided if you wish to capture additional metadata about the event.
+At a high level, this is useful if you wish to build user funnels and understand the effectiveness of a feature. Parameters are provided if you wish to capture additional metadata about the event.
 
 ```csharp
 CatalystSDK.Instance.Capture("ACTION", new Dictionary<string, object>{
@@ -54,25 +54,25 @@ Suggestions on how to use this:
     - Parameters could include the level played, XP earned, etc.
 - When a user attempts to make a purchase and when the purchase is successful
 
-In general it is important to capture key events around Monetization and Engagement using the `Capture` method. The `PageView` method will help you capture Retention metrics/KPIs. This will be ultimately useful for tracking LTV.
+In general, it is important to capture key events around Monetization and Engagement using the `Capture` method. The `PageView` method will help you capture retention metrics/KPIs. This will ultimately be useful for tracking user lifetime value (LTV).
 
 
 ### Alias
 
-Create an alias, which Catalyst will use to link two user ID’s going forward (not retroactively). Multiple aliases can map to the same USER_UNIQUE_ID, but not vice-versa.
+Create an alias, which Catalyst will use to link two user IDs going forward (not retroactively). Multiple aliases can map to the same USER_UNIQUE_ID, but not vice-versa.
 
 ```csharp
 CatalystSDK.Instance.Alias("USER_UNIQUE_ID", "ALIAS_ID");
 ```
 
-The context for using this is if you user has multiple identifiers you wish to leverage later for analytics or Catalyst feature purposes. For example, once you’ve used the `Identify()` method, you later might capture a user’s Twitter handle. If you wish to track this later, simply provide their unique user ID you used for `Identify()` as the first parameter, and the secondary identifier in the second parameter.
+The context for using this is if your user has multiple identifiers you wish to leverage later for analytics or Catalyst feature purposes. For example, once you’ve used the `Identify()` method, you might later might capture a user’s Twitter handle. If you wish to track this later, simply provide their unique user ID you used for `Identify()` as the first parameter, followed by the secondary identifier in the second parameter.
 
 Like `Identify()`, this only needs to be fired once.
 
 
 ### ScreenView
 
-This method to track when the user views a specific screen in your game. You can pass additional properties you wish to use later.
+This method is used to track when the user views a specific screen in your game. You can pass additional properties you wish to use later.
 
 ```csharp
 CatalystUnitySDK.Instance.ScreenView("SCREEN_NAME", new Dictionary<string, object>{
@@ -83,4 +83,4 @@ CatalystUnitySDK.Instance.ScreenView("SCREEN_NAME", new Dictionary<string, objec
 });
 ```
 
-It is extremely helpful to track screens because it allows us to track user retention for you as well as user LTV.
+Tracking screens is incredibly beneficial as it enables us to monitor both user retention and LTV effectively.

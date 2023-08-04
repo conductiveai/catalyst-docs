@@ -1,5 +1,5 @@
 ---
-title: Getting started
+title: Getting Started
 route: /quick-start
 tags: ['getting started', 'quick', 'installation']
 layout: default
@@ -16,30 +16,30 @@ You can follow our [quick installation guide in our public Github repository](ht
 ### Requirements
 
 - Unity 2018 or later installed on your computer
-- Internet connection
-- GitHub account
+- An internet connection
+- A GitHub account
 
 ### API Key
 
-You will first want to acquire an API key by visiting the dashboard <https://app.conductive.ai> and selecting the settings icon at the bottom and then “Settings”
+You will first want to acquire an API key by visiting the dashboard <https://app.conductive.ai> and selecting the settings icon at the bottom, followed by “Settings”.
 
 ![](https://github.com/conductiveai/catalyst-unity-sdk/blob/main/.github/settings.png?raw=true)
 
-This should take you to the project settings below, copy your API key provided for your project.
+This should take you to the project settings below. Copy your API key provided for your project.
 
 ![](https://github.com/conductiveai/catalyst-unity-sdk/blob/main/.github/settings2.png?raw=true)
 
 ### Installing the Unity SDK
 
-1. In Unity, go to **Window > Package Manager**
-2. Using the GitHub:
-    - In the ➕ button, go to **Add package from git URL**
-    - And paste <https://github.com/conductiveai/catalyst-unity-sdk.git> and click **Add**
+1. In Unity, go to **Window > Package Manager**. You can install the SDK using either the GitHub URL or the ZIP file.
+2. Using GitHub:
+    - Click the ➕ button, then go to **Add package from git URL**.
+    - Paste <https://github.com/conductiveai/catalyst-unity-sdk.git> and click **Add**.
 3. Using the ZIP file:
-    1. Go to [https://github.com/conductiveai/catalyst-unity-sdk](https://github.com/conductiveai/catalyst-unity-sdk.git) and [download the zip file](https://github.com/conductiveai/catalyst-unity-sdk/archive/refs/heads/main.zip)
-    2. Unzip the file
-    3. In the ➕ button, go to **Add package from disk**
-    4. In the zip folder that you unzipped select the package.json file.
+    - Go to [https://github.com/conductiveai/catalyst-unity-sdk](https://github.com/conductiveai/catalyst-unity-sdk.git) and [download the zip file](https://github.com/conductiveai/catalyst-unity-sdk/archive/refs/heads/main.zip)
+    - Unzip the file
+    - Click the ➕ button, then go to **Add package from disk**.
+    - Select the folder that you unzipped select the package.json file.
 
 ![](https://github.com/conductiveai/catalyst-unity-sdk/blob/main/.github/step1.png?raw=true)
 
@@ -49,15 +49,15 @@ This should take you to the project settings below, copy your API key provided f
 
 ## Integration in Unity
 
-1. In packages list, go to go to **Packages > CatalystSDK > Prefab**
-2. Drag CatalystSDK prefab to your project's loading scene or first scene
+1. In the packages list, go to **Packages > CatalystSDK > Prefab**
+2. Drag the CatalystSDK prefab to your project's loading scene or first scene
 
     ![](https://github.com/conductiveai/catalyst-unity-sdk/blob/main/.github/add-game-object.png?raw=true)
 
-3. Fill in the `API_KEY` field in the CatalystSDK prefab using the api key you acquired earlier.
+3. Fill in the `API_KEY` field in the CatalystSDK prefab using the API key you acquired earlier.
 
 ### That’s it! 🚀
 
-The CatalystSDK will capture user login events automatically.
+The CatalystSDK will automatically capture user login events automatically.
 
-No additional code needed! Placing the prefab in the game's first loaded scene or Main Menu ensures user logins are captured when the game starts.
+No additional code is required! Placing the prefab in the game's first loaded scene or Main Menu ensures user logins are captured when the game starts.
