@@ -9,7 +9,7 @@ date: 2023-08-02
 
 # Overview
 
-Welcome to the official documentation of the Conductive CatalystSDK 👋.
+Welcome to the official documentation of the Conductive Catalyst SDK 👋.
 
 The goal of this document is to provide a brief overview of how to get started with Conductive.ai's SDK.
 

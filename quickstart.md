@@ -50,14 +50,14 @@ This should take you to the project settings below. Copy your API key provided f
 ## Integration in Unity
 
 1. In the packages list, go to **Packages > CatalystSDK > Prefab**
-2. Drag the CatalystSDK prefab to your project's loading scene or first scene
+2. Drag the *CatalystSDK.prefab* to your project's loading scene or first scene
 
     ![](https://github.com/conductiveai/catalyst-unity-sdk/blob/main/.github/add-game-object.png?raw=true)
 
-3. Fill in the `API_KEY` field in the CatalystSDK prefab using the API key you acquired earlier.
+3. Fill in the `API_KEY` field in the *CatalystSDK.prefab* using the API key you acquired earlier.
 
 ### That’s it! 🚀
 
-The CatalystSDK will automatically capture user login events automatically.
+The Catalyst SDK will automatically capture user login events automatically.
 
 No additional code is required! Placing the prefab in the game's first loaded scene or Main Menu ensures user logins are captured when the game starts.
