@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744322867928">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744429822478">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -14,7 +14,7 @@
     <!-- Primary Meta Tags -->
     <title>Troubleshooting the SDK | Conductive Catalyst SDK</title>
     <meta name="title" content="Troubleshooting the SDK | Conductive Catalyst SDK">
-    <meta name="description" content="If you’re receiving a CocoaPods error e.g. ...ruby/2.6.0/gems/ffi-1.15.5/lib/ffi_c.">
+    <meta name="description" content="If you receive a CocoaPods error such as: ...ruby/2.6.0/gems/ffi-1.15.5/lib/ffi_c.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://catalyst.conductive.ai/troubleshooting-the-sdk/">
@@ -23,22 +23,22 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://catalyst.conductive.ai/troubleshooting-the-sdk/">
     <meta property="og:title" content="Troubleshooting the SDK | Conductive Catalyst SDK">
-    <meta property="og:description" content="If you’re receiving a CocoaPods error e.g. ...ruby/2.6.0/gems/ffi-1.15.5/lib/ffi_c.">
+    <meta property="og:description" content="If you receive a CocoaPods error such as: ...ruby/2.6.0/gems/ffi-1.15.5/lib/ffi_c.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://catalyst.conductive.ai/troubleshooting-the-sdk/">
     <meta property="twitter:title" content="Troubleshooting the SDK | Conductive Catalyst SDK">
-    <meta property="twitter:description" content="If you’re receiving a CocoaPods error e.g. ...ruby/2.6.0/gems/ffi-1.15.5/lib/ffi_c.">
+    <meta property="twitter:description" content="If you receive a CocoaPods error such as: ...ruby/2.6.0/gems/ffi-1.15.5/lib/ffi_c.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../icon.png" rel="icon">
-    <link href="../resources/css/retype.css?v=3.1.0.744322867928" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.1.0.744429822478" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.744322867928" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.744429822478" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.744322867928" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.744429822478" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -199,23 +199,21 @@
         <span><strong>Building for iOS / XCode</strong></span>
     </h2>
 </doc-anchor-target>
-<ul>
-<li>If you’re receiving a CocoaPods error e.g. <code v-pre>...ruby/2.6.0/gems/ffi-1.15.5/lib/ffi_c.bundle' (mach-o file, but is an incompatible architecture (have 'arm64', need 'x86_64')),</code></li>
-<li>This means you have <code v-pre>ffi</code> built for <code v-pre>arm64</code> but not <code v-pre>x86_64</code> architecture</li>
-<li>Make sure you have Developer Mode enabled on your iOS device, Settings → Privacy → Developer mode → on</li>
-<li>Do the following:</li>
-</ul>
-<p>Install llvm</p>
+<p>If you receive a CocoaPods error such as: <code v-pre>...ruby/2.6.0/gems/ffi-1.15.5/lib/ffi_c.bundle' (mach-o file, but is an incompatible architecture (have 'arm64', need 'x86_64')),</code>
+This means you have <code v-pre>ffi</code> built for <code v-pre>arm64</code> but not <code v-pre>x86_64</code> architecture.
+Make sure you have Developer Mode enabled on your iOS device: <code v-pre>Settings → Privacy → Developer mode → on</code>
+Then, do the following:</p>
+<p>(1) Install llvm:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">arch -arm64 brew install llvm
 export LDFLAGS=&quot;-L/opt/homebrew/opt/llvm/lib&quot;
 export CPPFLAGS=&quot;-I/opt/homebrew/opt/llvm/include&quot;</code></pre>
 </doc-codeblock></div>
-<p>Uninstall ffi</p>
+<p>(2) Uninstall ffi:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">sudo gem uninstall ffi</code></pre>
 </doc-codeblock></div>
-<p>If prompted, uninstall ALL versions. install ffi gem for x86_64</p>
+<p>(3) If prompted, uninstall ALL versions. install ffi gem for x86_64:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none">sudo arch -x86_64 gem install ffi`</code></pre>
 </doc-codeblock></div>

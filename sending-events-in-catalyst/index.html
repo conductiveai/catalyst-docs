@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744322867928">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744429822478">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -14,7 +14,7 @@
     <!-- Primary Meta Tags -->
     <title>Sending Events in Catalyst | Conductive Catalyst SDK</title>
     <meta name="title" content="Sending Events in Catalyst | Conductive Catalyst SDK">
-    <meta name="description" content="By default, adding your API_KEY will automatically send a registration event to Catalyst’s backend so we know you use exists and logged into your...">
+    <meta name="description" content="By default, adding your API_KEY will automatically send a registration event to Catalyst’s backend and record when users have logged into your...">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://catalyst.conductive.ai/sending-events-in-catalyst/">
@@ -23,23 +23,23 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://catalyst.conductive.ai/sending-events-in-catalyst/">
     <meta property="og:title" content="Sending Events in Catalyst | Conductive Catalyst SDK">
-    <meta property="og:description" content="By default, adding your API_KEY will automatically send a registration event to Catalyst’s backend so we know you use exists and logged into your...">
+    <meta property="og:description" content="By default, adding your API_KEY will automatically send a registration event to Catalyst’s backend and record when users have logged into your...">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://catalyst.conductive.ai/sending-events-in-catalyst/">
     <meta property="twitter:title" content="Sending Events in Catalyst | Conductive Catalyst SDK">
-    <meta property="twitter:description" content="By default, adding your API_KEY will automatically send a registration event to Catalyst’s backend so we know you use exists and logged into your...">
+    <meta property="twitter:description" content="By default, adding your API_KEY will automatically send a registration event to Catalyst’s backend and record when users have logged into your...">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../icon.png" rel="icon">
-    <link href="../resources/css/retype.css?v=3.1.0.744322867928" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.1.0.744429822478" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.744322867928" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.744429822478" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.744322867928" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.1.0.744322867928" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.744429822478" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.1.0.744429822478" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -184,17 +184,17 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="sending-events" class="break-words">
+<doc-anchor-target id="sending-events-in-catalyst" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#sending-events">#</doc-anchor-trigger>
-        <span>Sending events</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#sending-events-in-catalyst">#</doc-anchor-trigger>
+        <span>Sending Events in Catalyst</span>
     </h1>
 </doc-anchor-target>
 <div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350 items-center">
     <div class="flex items-center shrink-0">Published&nbsp;<span>2023-08-02</span></div>
 </div>
 
-<p>By default, adding your <code v-pre>API_KEY</code> will automatically send a registration event to Catalyst’s backend so we know you use exists and logged into your application.</p>
+<p>By default, adding your <code v-pre>API_KEY</code> will automatically send a registration event to Catalyst’s backend and record when users have logged into your application.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -209,7 +209,7 @@
         </div>
         <div class="pr-5 ml-3 w-full">
             <h5><span class="docs-emoji">&#x26A0;&#xFE0F;</span></h5>
-<p>In order to effectively use the features of Catalyst though, it is important you identify you user using <code v-pre>CatalystSDK.identify()</code> and identify them using your own internal user ID. This will be vital when integrating additional features.</p>
+<p>In order to effectively use the features of Catalyst, it is important to identify your users using <code v-pre>CatalystSDK.identify()</code> and label them using your own internal user ID. This will be vital when integrating additional features.</p>
         </div>
     </div>
 </div>
@@ -219,7 +219,7 @@
         <span>Identify</span>
     </h3>
 </doc-anchor-target>
-<p>Identify a user with your application/games unique internal ID instead of a Catalyst. If not provided, Catalyst will generate a random but unique identifier. If this method is never called, then unique visitors will be identified by a randomly generated UUID generated the first time they launch your application.</p>
+<p>You can identify a user with your application or game&#x27;s unique internal ID instead of with Catalyst. If not provided, Catalyst will generate a random but unique identifier. If this method is never called, then unique visitors will be identified by a randomly generated UUID generated the first time they launch your application.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-csharp"><code v-pre class="language-csharp">CatalystSDK.Instance.Identify(&quot;USER_UNIQUE_ID&quot;, new Dictionary&lt;string, object&gt;{
     { &quot;age&quot;, Age },
@@ -227,16 +227,16 @@
     { &quot;name&quot;: Name }
 });</code></pre>
 </doc-codeblock></div>
-<p>Ideally, you should only capture this once. For example, once a user successfully registered and verifies their email address, you can fire this event once.</p>
-<p>If you can’t avoid firing this frequently (like at app cold launch), then it is ok. We will still track the user for you.</p>
+<p>Ideally, you should only capture this once. For example, once a user successfully registers and verifies their email address, you can fire this event once.</p>
+<p>If you can’t avoid firing this frequently (like at app cold launch), don&#x27;t worry — we&#x27;ll still track the user for you.</p>
 <doc-anchor-target id="custom-capture">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#custom-capture">#</doc-anchor-trigger>
         <span>Custom Capture</span>
     </h3>
 </doc-anchor-target>
-<p>Captures a custom event. This Catalyst function allows you to capture additional events in the game. You do not need to use Capture to capture daily logins as we will do this for you.</p>
-<p>At a high-level, this is useful if you wish to build user funnels and understand the effectiveness of a feature. Parameters are provided if you wish to capture additional metadata about the event.</p>
+<p>Captures a custom event. This Catalyst function allows you to capture additional events in the game. You do not need to use this to capture daily logins, as we will do this for you.</p>
+<p>At a high level, this is useful if you wish to build user funnels and understand the effectiveness of a feature. Parameters are provided if you wish to capture additional metadata about the event.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-csharp"><code v-pre class="language-csharp">CatalystSDK.Instance.Capture(&quot;ACTION&quot;, new Dictionary&lt;string, object&gt;{
     { &quot;param1&quot;, Param1 },
@@ -255,18 +255,18 @@
 </li>
 <li>When a user attempts to make a purchase and when the purchase is successful</li>
 </ul>
-<p>In general it is important to capture key events around Monetization and Engagement using the <code v-pre>Capture</code> method. The <code v-pre>PageView</code> method will help you capture Retention metrics/KPIs. This will be ultimately useful for tracking LTV.</p>
+<p>In general, it is important to capture key events around Monetization and Engagement using the <code v-pre>Capture</code> method. The <code v-pre>PageView</code> method will help you capture retention metrics/KPIs. This will ultimately be useful for tracking user lifetime value (LTV).</p>
 <doc-anchor-target id="alias">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#alias">#</doc-anchor-trigger>
         <span>Alias</span>
     </h3>
 </doc-anchor-target>
-<p>Create an alias, which Catalyst will use to link two user ID’s going forward (not retroactively). Multiple aliases can map to the same USER_UNIQUE_ID, but not vice-versa.</p>
+<p>Create an alias, which Catalyst will use to link two user IDs going forward (not retroactively). Multiple aliases can map to the same USER_UNIQUE_ID, but not vice-versa.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-csharp"><code v-pre class="language-csharp">CatalystSDK.Instance.Alias(&quot;USER_UNIQUE_ID&quot;, &quot;ALIAS_ID&quot;);</code></pre>
 </doc-codeblock></div>
-<p>The context for using this is if you user has multiple identifiers you wish to leverage later for analytics or Catalyst feature purposes. For example, once you’ve used the <code v-pre>Identify()</code> method, you later might capture a user’s Twitter handle. If you wish to track this later, simply provide their unique user ID you used for <code v-pre>Identify()</code> as the first parameter, and the secondary identifier in the second parameter.</p>
+<p>The context for using this is if your user has multiple identifiers you wish to leverage later for analytics or Catalyst feature purposes. For example, once you’ve used the <code v-pre>Identify()</code> method, you might later might capture a user’s Twitter handle. If you wish to track this later, simply provide their unique user ID you used for <code v-pre>Identify()</code> as the first parameter, followed by the secondary identifier in the second parameter.</p>
 <p>Like <code v-pre>Identify()</code>, this only needs to be fired once.</p>
 <doc-anchor-target id="screenview">
     <h3>
@@ -274,7 +274,7 @@
         <span>ScreenView</span>
     </h3>
 </doc-anchor-target>
-<p>This method to track when the user views a specific screen in your game. You can pass additional properties you wish to use later.</p>
+<p>This method is used to track when the user views a specific screen in your game. You can pass additional properties you wish to use later.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-csharp"><code v-pre class="language-csharp">CatalystUnitySDK.Instance.ScreenView(&quot;SCREEN_NAME&quot;, new Dictionary&lt;string, object&gt;{
     { &quot;param1&quot;, Param1 },
@@ -283,7 +283,7 @@
     { &quot;param4&quot;, Param4 }
 });</code></pre>
 </doc-codeblock></div>
-<p>It is extremely helpful to track screens because it allows us to track user retention for you as well as user LTV.</p>
+<p>Tracking screens is incredibly beneficial as it enables us to monitor both user retention and LTV effectively.</p>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>

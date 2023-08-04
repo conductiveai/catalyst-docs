@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744322867928">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.1.0.744429822478">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.1.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../icon.png" rel="icon">
-    <link href="../resources/css/retype.css?v=3.1.0.744322867928" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.1.0.744429822478" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.744322867928" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.1.0.744429822478" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.1.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.744322867928" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.1.0.744429822478" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -196,7 +196,7 @@
 </div>
 
 <p>The Conductive Catalyst SDK is primarily provided to game developers as a Unity SDK. We also support native Android (Kotlin) and iOS (Swift) SDKs upon request.</p>
-<p>We’ve made it insanely easy to get started with the SDK. Simply follow the steps to get started.</p>
+<p>We’ve made it extremely easy to get started with the SDK. Simply follow the steps below to get started.</p>
 <doc-anchor-target id="sdk-installation">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#sdk-installation">#</doc-anchor-trigger>
@@ -218,8 +218,8 @@
 </doc-anchor-target>
 <ul>
 <li>Unity 2018 or later installed on your computer</li>
-<li>Internet connection</li>
-<li>GitHub account</li>
+<li>An internet connection</li>
+<li>A GitHub account</li>
 </ul>
 <doc-anchor-target id="api-key">
     <h3>
@@ -227,13 +227,13 @@
         <span>API Key</span>
     </h3>
 </doc-anchor-target>
-<p>You will first want to acquire an API key by visiting the dashboard <a href="https://app.conductive.ai">https://app.conductive.ai</a> and selecting the settings icon at the bottom and then “Settings”</p>
+<p>You will first want to acquire an API key by visiting the dashboard <a href="https://app.conductive.ai">https://app.conductive.ai</a> and selecting the settings icon, followed by “Settings”</p>
 <p><figure class="content-center">
     <img src="https://github.com/conductiveai/catalyst-unity-sdk/blob/main/.github/settings.png?raw=true" alt="">
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
-<p>This should take you to the project settings below, copy your API key provided for your project.</p>
+<p>This should take you to the project settings below. Copy your API key provided for your project.</p>
 <p><figure class="content-center">
     <img src="https://github.com/conductiveai/catalyst-unity-sdk/blob/main/.github/settings2.png?raw=true" alt="">
     <figcaption class="caption"></figcaption>
@@ -246,19 +246,20 @@
     </h3>
 </doc-anchor-target>
 <ol>
-<li>In Unity, go to <strong>Window &gt; Package Manager</strong></li>
-<li>Using the GitHub:
+<li>In Unity, go to <strong>Window &gt; Package Manager</strong>. You can install the SDK using either the GitHub URL or the ZIP file.</li>
+<li>Using GitHub:
 <ul>
-<li>In the <span class="docs-emoji">&#x2795;</span> button, go to <strong>Add package from git URL</strong></li>
-<li>And paste <a href="https://github.com/conductiveai/catalyst-unity-sdk.git">https://github.com/conductiveai/catalyst-unity-sdk.git</a> and click <strong>Add</strong></li>
+<li>Click the <span class="docs-emoji">&#x2795;</span> button, then go to <strong>Add package from git URL</strong>.</li>
+<li>Paste <a href="https://github.com/conductiveai/catalyst-unity-sdk.git">https://github.com/conductiveai/catalyst-unity-sdk.git</a> and click <strong>Add</strong>.</li>
 </ul>
 </li>
 <li>Using the ZIP file:
-<ol>
+<ul>
 <li>Go to <a href="https://github.com/conductiveai/catalyst-unity-sdk.git">https://github.com/conductiveai/catalyst-unity-sdk</a> and <a href="https://github.com/conductiveai/catalyst-unity-sdk/archive/refs/heads/main.zip">download the zip file</a></li>
-<li>In the <span class="docs-emoji">&#x2795;</span> button, go to <strong>Add package from disk</strong></li>
-<li>Select the zip file, that you download from GitHub.</li>
-</ol>
+<li>Unzip the file</li>
+<li>Click the <span class="docs-emoji">&#x2795;</span> button, then go to <strong>Add package from disk</strong>.</li>
+<li>Select the folder that you unzipped select the package.json file.</li>
+</ul>
 </li>
 </ol>
 <p><figure class="content-center">
@@ -283,12 +284,12 @@
     </h3>
 </doc-anchor-target>
 <ol>
-<li><p>In packages list, go to go to <strong>Packages &gt; CatalystSDK &gt; Prefab</strong></p>
+<li><p>In the packages list, go to <strong>Packages &gt; CatalystSDK &gt; Prefab</strong>.</p>
 </li>
-<li><p>Drag <em>CatalystSDK prefab</em> to your project&#x27;s loading scene or first scene</p>
+<li><p>Drag the <em>CatalystSDK prefab</em> to your project&#x27;s loading scene or first scene</p>
 <p><img src="https://github.com/conductiveai/catalyst-unity-sdk/blob/main/.github/add-game-object.png?raw=true" alt="" /></p>
 </li>
-<li><p>Fill in the <code v-pre>API_KEY</code> field in the <em>CatalystSDK prefab</em> using the api key you acquired earlier.</p>
+<li><p>Fill in the <code v-pre>API_KEY</code> field in the <em>CatalystSDK prefab</em> using the API key you acquired earlier.</p>
 </li>
 </ol>
 <doc-anchor-target id="that-s-it">
@@ -297,8 +298,8 @@
         <span>That’s it! <span class="docs-emoji">&#x1F680;</span></span>
     </h3>
 </doc-anchor-target>
-<p>The Conductive SDK will capture user login events automatically.</p>
-<p>No additional code needed! Placing the prefab in the game&#x27;s first loaded scene or Main Menu ensures user logins are captured when the game starts.</p>
+<p>The Conductive SDK will automatically capture user login events automatically.</p>
+<p>No additional code is required! Placing the prefab in the game&#x27;s first loaded scene or Main Menu ensures user logins are captured when the game starts.</p>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
@@ -334,7 +335,7 @@
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Catalyst Account setup</span>
+                                                <span class="block mt-1">Catalyst Account Setup</span>
                                             </span>
                                         </a>
                                     </div>
