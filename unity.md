@@ -60,6 +60,11 @@ This should take you to the project settings below. Copy your API key provided f
 
 3. Fill in the `API_KEY` field in the *CatalystSDK.prefab* using the API key you acquired earlier.
 
+4. Fill in the `SceneToShowButton` field in the *CatalystSDK.prefab* with the name of the Unity scene where you want the button to be shown. Pressing this button takes a user to the rewards interface where they can see contest information and their leaderboard rank.
+
+	![](https://github.com/conductiveai/catalyst-docs/blob/main/.github/unity-prefab.png?raw=true)
+
+
 ### That’s it! 🚀
 
 The Catalyst SDK will automatically capture user login events automatically.
