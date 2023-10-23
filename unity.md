@@ -54,6 +54,7 @@ This should take you to the project settings below. Copy your API key provided f
 ### Integration in Unity
 
 1. In the packages list, go to **Packages > CatalystSDK > Prefab**.
+
 2. Drag the *CatalystSDK.prefab* to your project's loading scene or first scene
 
     ![](https://github.com/conductiveai/catalyst-unity-sdk/blob/main/.github/add-game-object.png?raw=true)
@@ -64,6 +65,9 @@ This should take you to the project settings below. Copy your API key provided f
 
 	![](https://github.com/conductiveai/catalyst-docs/blob/main/.github/unity-prefab.png?raw=true)
 
+5. Configure the `Canvas` and `Canvas Scaler` on the *CatalystSDK.prefab* to fit your game's UI. The button and webview for the rewards interface is rendered on this Canvas.
+
+	![](https://github.com/conductiveai/catalyst-docs/blob/main/.github/unity-prefab-canvas?raw=true)
 
 ### That’s it! 🚀
 
