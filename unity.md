@@ -67,7 +67,7 @@ This should take you to the project settings below. Copy your API key provided f
 
 5. Configure the `Canvas` and `Canvas Scaler` on the *CatalystSDK.prefab* to fit your game's UI. The button and webview for the rewards interface is rendered on this Canvas.
 
-	![](https://github.com/conductiveai/catalyst-docs/blob/main/.github/unity-prefab-canvas?raw=true)
+	![](https://github.com/conductiveai/catalyst-docs/blob/main/.github/unity-prefab-canvas.png?raw=true)
 
 ### That’s it! 🚀
 
