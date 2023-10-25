@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.751409337592">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.751564584358">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -36,11 +36,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../icon.png" rel="icon">
-    <link href="../resources/css/retype.css?v=3.5.0.751409337592" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.5.0.751564584358" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.751409337592" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.751564584358" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.751409337592" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.751564584358" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.5.0.751564584358" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -216,7 +217,7 @@
     </h3>
 </doc-anchor-target>
 <ul>
-<li>Unity 2018 or later installed on your computer</li>
+<li>Unity 2020 or later installed on your computer</li>
 <li>An internet connection</li>
 <li>A GitHub account</li>
 </ul>
@@ -296,7 +297,13 @@
 <li><p>Configure the <code v-pre>Canvas</code> and <code v-pre>Canvas Scaler</code> on the <em>CatalystSDK.prefab</em> to fit your game&#x27;s UI. The button and webview for the rewards interface is rendered on this Canvas.</p>
 <p><img src="https://github.com/conductiveai/catalyst-docs/blob/main/.github/unity-prefab-canvas.png?raw=true" alt="" /></p>
 </li>
+<li><p>If you are creating leaderboard contests you will need to add a line of code when a player logs into your game to synchronize data with Catalyst services.</p>
+</li>
 </ol>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-csharp"><code v-pre class="language-csharp">CatalystSDK.Instance.SetExternalId(&quot;USER_ID_1&quot;);</code></pre>
+</doc-codeblock></div>
+<p>Please refer to this page for more information: <a href="https://catalyst.conductive.ai/sending-events-in-catalyst/">Sending Events in Catalyst</a></p>
 <doc-anchor-target id="that-s-it">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#that-s-it">#</doc-anchor-trigger>
@@ -304,7 +311,21 @@
     </h3>
 </doc-anchor-target>
 <p>The Catalyst SDK will automatically capture user login events automatically.</p>
-<p>No additional code is required! Placing the prefab in the game&#x27;s first loaded scene or Main Menu ensures user logins are captured when the game starts.</p>
+<p>Placing the prefab in the game&#x27;s first loaded scene or Main Menu ensures user logins are captured when the game starts.</p>
+<doc-anchor-target id="building-for-specific-platforms">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#building-for-specific-platforms">#</doc-anchor-trigger>
+        <span>Building for specific platforms <span class="docs-emoji">&#x1F4F1;</span></span>
+    </h3>
+</doc-anchor-target>
+<p>iOS:</p>
+<ul>
+<li>Please include <code v-pre>Security.Framework</code> to your project in Xcode before you build. This is requirement to use Keychain services. For more information please check <a href="https://developer.apple.com/documentation/security">Apple&#x27;s documentation</a></li>
+</ul>
+<p>Android:</p>
+<ul>
+<li>Uniwebiew includes Android libraries that may have a duplicate class with other Android plugins. If you see errors refering to a duplicate class please check <a href="https://docs.uniwebview.com/guide/trouble-shooting.html#android">Uniwebview&#x27;s documentation</a></li>
+</ul>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
@@ -393,6 +414,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Unity SDK", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Unity SDK", level: 1, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
