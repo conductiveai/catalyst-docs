@@ -84,3 +84,11 @@ CatalystUnitySDK.Instance.ScreenView("SCREEN_NAME", new Dictionary<string, objec
 ```
 
 Tracking screens is incredibly beneficial as it enables us to monitor both user retention and LTV effectively.
+
+### User Synchronization
+
+This method is used to connect a player’s user ID in a game with their Catalyst ID to synchronize data with Conductive’s services. This is a necessary step when creating contests that utilize a Leaderboard. Adding this line of code when a user logs into the game ensures we can synchronize data.
+
+```csharp
+CatalystSDK.Instance.SetExternalId("USER_ID_1");
+```

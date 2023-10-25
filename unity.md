@@ -19,7 +19,7 @@ You can follow our [quick installation guide in our public Github repository](ht
 
 ### Requirements
 
-- Unity 2018 or later installed on your computer
+- Unity 2020 or later installed on your computer
 - An internet connection
 - A GitHub account
 
@@ -69,8 +69,24 @@ This should take you to the project settings below. Copy your API key provided f
 
 	![](https://github.com/conductiveai/catalyst-docs/blob/main/.github/unity-prefab-canvas.png?raw=true)
 
+6. If you are creating leaderboard contests you will need to add a line of code when a player logs into your game to synchronize data with Catalyst services.
+
+```csharp
+CatalystSDK.Instance.SetExternalId("USER_ID_1");
+```
+
+Please refer to this page for more information: [Sending Events in Catalyst](https://catalyst.conductive.ai/sending-events-in-catalyst/)
+
 ### That’s it! 🚀
 
 The Catalyst SDK will automatically capture user login events automatically.
 
-No additional code is required! Placing the prefab in the game's first loaded scene or Main Menu ensures user logins are captured when the game starts.
+Placing the prefab in the game's first loaded scene or Main Menu ensures user logins are captured when the game starts.
+
+### Building for specific platforms 📱
+
+iOS:
+- Please include `Security.Framework` to your project in Xcode before you build. This is requirement to use Keychain services. For more information please check [Apple's documentation](https://developer.apple.com/documentation/security)
+
+Android:
+- Uniwebiew includes Android libraries that may have a duplicate class with other Android plugins. If you see errors refering to a duplicate class please check [Uniwebview's documentation](https://docs.uniwebview.com/guide/trouble-shooting.html#android)
