@@ -69,10 +69,11 @@ This should take you to the project settings below. Copy your API key provided f
 
 	![](https://github.com/conductiveai/catalyst-docs/blob/main/.github/unity-prefab-canvas.png?raw=true)
 
-6. If you are creating leaderboard contests you will need to add a line of code when a player logs into your game to synchronize data with Catalyst services.
+6. If you are creating leaderboard contests you will need to add a line of code when a player logs into your game to synchronize data with Catalyst services. Please open the `CatalystSDK.cs` script in the `CatalystSDK0` folder. Then, edit this line of code to synchronize player IDs with Catalyst services.
 
 ```csharp
-CatalystSDK.Instance.SetExternalId("USER_ID_1");
+//Set your game's user id here to synchronize data with Catalyst services
+SetExternalId("USER_ID");
 ```
 
 Please refer to this page for more information: [Sending Events in Catalyst](https://catalyst.conductive.ai/sending-events-in-catalyst/)
