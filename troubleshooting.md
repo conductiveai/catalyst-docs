@@ -3,7 +3,7 @@ title: Troubleshooting the SDK
 route: /troubleshooting-the-sdk
 tags: ['help', 'error', 'issues', 'troubleshooting']
 layout: default
-order: 3
+order: 5
 date: 2023-08-02
 ---
 

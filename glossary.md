@@ -3,7 +3,7 @@ title: Glossary
 route: /glossary
 tags: ['glossary', 'definition', 'terms']
 layout: default
-order: 9
+order: 11
 date: 2023-08-02
 ---
 The following is a non-exhaustive list of technical terms used by Conductive.ai that may be referenced throughout this document.

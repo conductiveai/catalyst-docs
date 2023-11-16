@@ -3,8 +3,8 @@ title: Unity SDK
 route: /catalyst-unity-sdk
 tags: ['sdk', 'unity', 'client', 'android', 'ios']
 layout: default
-order: 6
-date: 2023-08-02
+order: 8
+date: 2023-11-16
 ---
 
 The Conductive Catalyst SDK is primarily provided to game developers as a Unity SDK. We also support native Android (Kotlin) and iOS (Swift) SDKs upon request.
@@ -69,7 +69,7 @@ This should take you to the project settings below. Copy your API key provided f
 
 	![](https://github.com/conductiveai/catalyst-docs/blob/main/.github/unity-prefab-canvas.png?raw=true)
 
-6. If you are creating leaderboard contests you will need to add a line of code when a player logs into your game to synchronize data with Catalyst services. Please open the `CatalystSDK.cs` script in the `CatalystSDK0` folder. Then, edit this line of code to synchronize player IDs with Catalyst services.
+6. Please open the `CatalystSDK.cs` script in the `CatalystSDK` folder. Then, edit this line of code to synchronize player IDs with Catalyst services.
 
 ```csharp
 //Set your game's user id here to synchronize data with Catalyst services

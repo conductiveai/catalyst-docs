@@ -3,8 +3,8 @@ title: Sending Events in Catalyst
 route: /sending-events-in-catalyst
 tags: ['events', 'analytics', 'capture', 'identity']
 layout: default
-order: 5
-date: 2023-08-02
+order: 7
+date: 2023-11-16
 ---
 # Sending Events in Catalyst
 
@@ -87,8 +87,11 @@ Tracking screens is incredibly beneficial as it enables us to monitor both user 
 
 ### User Synchronization
 
-This method is used to connect a player’s user ID in a game with their Catalyst ID to synchronize data with Conductive’s services. This is a necessary step when creating contests that utilize a Leaderboard. Adding this line of code when a user logs into the game ensures we can synchronize data.
+Please open the `CatalystSDK.cs` script in the `CatalystSDK` folder. Then, edit this line of code to synchronize player IDs with Catalyst services. 
 
 ```csharp
-CatalystSDK.Instance.SetExternalId("USER_ID_1");
+//Set your game's user id here to synchronize data with Catalyst services
+SetExternalId("USER_ID");
 ```
+
+This method is used to connect a player’s user ID in a game with their Catalyst ID to synchronize data with Conductive’s services. This is a necessary step when creating contests that utilize a Leaderboard. Updating this line of code when a user logs into the game ensures we can synchronize data.

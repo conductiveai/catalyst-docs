@@ -3,7 +3,7 @@ title: SDK Events Examples
 route: /sdk-events-examples
 tags: ['examples', 'sdk', 'unity', 'custom']
 layout: default
-order: 4
+order: 6
 date: 2023-08-02
 ---
 # Event example
