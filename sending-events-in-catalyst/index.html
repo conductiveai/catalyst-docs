@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.752790230155">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.753490369276">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -34,12 +34,12 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../icon.png" rel="icon">
-    <link href="../resources/css/retype.css?v=3.5.0.752790230155" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.5.0.753490369276" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.752790230155" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.753490369276" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.752790230155" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.5.0.752790230155" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.753490369276" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.5.0.753490369276" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -190,7 +190,7 @@
     </h1>
 </doc-anchor-target>
 <div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350 items-center">
-    <div class="flex items-center shrink-0">Published&nbsp;<span>2023-08-02</span></div>
+    <div class="flex items-center shrink-0">Published&nbsp;<span>2023-11-16</span></div>
 </div>
 
 <p>By default, adding your <code v-pre>API_KEY</code> will automatically send a registration event to Catalyst’s backend and record when users have logged into your application.</p>
@@ -289,10 +289,12 @@
         <span>User Synchronization</span>
     </h3>
 </doc-anchor-target>
-<p>This method is used to connect a player’s user ID in a game with their Catalyst ID to synchronize data with Conductive’s services. This is a necessary step when creating contests that utilize a Leaderboard. Adding this line of code when a user logs into the game ensures we can synchronize data.</p>
+<p>Please open the <code v-pre>CatalystSDK.cs</code> script in the <code v-pre>CatalystSDK</code> folder. Then, edit this line of code to synchronize player IDs with Catalyst services.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-csharp"><code v-pre class="language-csharp">CatalystSDK.Instance.SetExternalId(&quot;USER_ID_1&quot;);</code></pre>
+<pre class="language-csharp"><code v-pre class="language-csharp">//Set your game's user id here to synchronize data with Catalyst services
+SetExternalId(&quot;USER_ID&quot;);</code></pre>
 </doc-codeblock></div>
+<p>This method is used to connect a player’s user ID in a game with their Catalyst ID to synchronize data with Conductive’s services. This is a necessary step when creating contests that utilize a Leaderboard. Updating this line of code when a user logs into the game ensures we can synchronize data.</p>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>

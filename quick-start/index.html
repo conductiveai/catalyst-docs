@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.752790230155">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.753490369276">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -36,11 +36,11 @@
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
     <link href="../icon.png" rel="icon">
-    <link href="../resources/css/retype.css?v=3.5.0.752790230155" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.5.0.753490369276" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.752790230155" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.5.0.753490369276" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.752790230155" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.5.0.753490369276" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -195,6 +195,20 @@
 </div>
 
 <p>If you want to integrate <strong>CatalystSDK</strong> into your Unity game development project, this step-by-step guide will help you install the package into Unity.</p>
+<doc-anchor-target id="sdk-integration">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#sdk-integration">#</doc-anchor-trigger>
+        <span>SDK Integration</span>
+    </h3>
+</doc-anchor-target>
+<p><strong>Meeting the requirements</strong></p>
+<p>Before starting with Conductive.ai, ensure you satisfy these requirements:</p>
+<ul>
+<li>Working with Unity 2020 or a later version</li>
+<li>A stable internet connection</li>
+<li>A GitHub account for accessing necessary resources</li>
+</ul>
+<p>These prerequisites are designed to facilitate a smooth setup process and are vital in successfully integrating the platform’s functionalities into your project, paving the way for enhanced player LTV and engagement.</p>
 <doc-anchor-target id="installation-guide">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#installation-guide">#</doc-anchor-trigger>
@@ -202,17 +216,6 @@
     </h3>
 </doc-anchor-target>
 <p>You can follow our <a href="https://github.com/conductiveai/catalyst-unity-sdk">quick installation guide in our public Github repository</a>, or continue following the instructions below.</p>
-<doc-anchor-target id="requirements">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#requirements">#</doc-anchor-trigger>
-        <span>Requirements</span>
-    </h3>
-</doc-anchor-target>
-<ul>
-<li>Unity 2018 or later installed on your computer</li>
-<li>An internet connection</li>
-<li>A GitHub account</li>
-</ul>
 <doc-anchor-target id="api-key">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#api-key">#</doc-anchor-trigger>
@@ -231,67 +234,6 @@
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
-<doc-anchor-target id="installing-the-unity-sdk">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#installing-the-unity-sdk">#</doc-anchor-trigger>
-        <span>Installing the Unity SDK</span>
-    </h3>
-</doc-anchor-target>
-<ol>
-<li>In Unity, go to <strong>Window &gt; Package Manager</strong>. You can install the SDK using either the GitHub URL or the ZIP file.</li>
-<li>Using GitHub:
-<ul>
-<li>Click the <span class="docs-emoji">&#x2795;</span> button, then go to <strong>Add package from git URL</strong>.</li>
-<li>Paste <a href="https://github.com/conductiveai/catalyst-unity-sdk.git">https://github.com/conductiveai/catalyst-unity-sdk.git</a> and click <strong>Add</strong>.</li>
-</ul>
-</li>
-<li>Using the ZIP file:
-<ul>
-<li>Go to <a href="https://github.com/conductiveai/catalyst-unity-sdk.git">https://github.com/conductiveai/catalyst-unity-sdk</a> and <a href="https://github.com/conductiveai/catalyst-unity-sdk/archive/refs/heads/main.zip">download the zip file</a></li>
-<li>Unzip the file</li>
-<li>Click the <span class="docs-emoji">&#x2795;</span> button, then go to <strong>Add package from disk</strong>.</li>
-<li>Select the folder that you unzipped select the package.json file.</li>
-</ul>
-</li>
-</ol>
-<p><figure class="content-center">
-    <img src="https://github.com/conductiveai/catalyst-unity-sdk/blob/main/.github/step1.png?raw=true" alt="">
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<p><figure class="content-center">
-    <img src="https://github.com/conductiveai/catalyst-unity-sdk/blob/main/.github/step2.png?raw=true" alt="">
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<p><figure class="content-center">
-    <img src="https://github.com/conductiveai/catalyst-unity-sdk/blob/main/.github/step3.png?raw=true" alt="">
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
-<doc-anchor-target id="integration-in-unity">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#integration-in-unity">#</doc-anchor-trigger>
-        <span>Integration in Unity</span>
-    </h2>
-</doc-anchor-target>
-<ol>
-<li><p>In the packages list, go to <strong>Packages &gt; CatalystSDK &gt; Prefab</strong></p>
-</li>
-<li><p>Drag the <em>CatalystSDK.prefab</em> to your project&#x27;s loading scene or first scene</p>
-<p><img src="https://github.com/conductiveai/catalyst-unity-sdk/blob/main/.github/add-game-object.png?raw=true" alt="" /></p>
-</li>
-<li><p>Fill in the <code v-pre>API_KEY</code> field in the <em>CatalystSDK.prefab</em> using the API key you acquired earlier.</p>
-</li>
-</ol>
-<doc-anchor-target id="that-s-it">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#that-s-it">#</doc-anchor-trigger>
-        <span>That’s it! <span class="docs-emoji">&#x1F680;</span></span>
-    </h3>
-</doc-anchor-target>
-<p>The Catalyst SDK will automatically capture user login events automatically.</p>
-<p>No additional code is required! Placing the prefab in the game&#x27;s first loaded scene or Main Menu ensures user logins are captured when the game starts.</p>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>

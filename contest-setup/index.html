@@ -12,24 +12,24 @@
     <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
-    <title>Troubleshooting the SDK | Conductive Catalyst SDK</title>
-    <meta name="title" content="Troubleshooting the SDK | Conductive Catalyst SDK">
-    <meta name="description" content="If you receive a CocoaPods error such as: ...ruby/2.6.0/gems/ffi-1.15.5/lib/ffi_c.">
+    <title>How to Set Up Your First Contest | Conductive Catalyst SDK</title>
+    <meta name="title" content="How to Set Up Your First Contest | Conductive Catalyst SDK">
+    <meta name="description" content="Use the SceneToShowButton field to set where the Conductive Button appears in your game.">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://catalyst.conductive.ai/troubleshooting-the-sdk/">
+    <link rel="canonical" href="https://catalyst.conductive.ai/contest-setup/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://catalyst.conductive.ai/troubleshooting-the-sdk/">
-    <meta property="og:title" content="Troubleshooting the SDK | Conductive Catalyst SDK">
-    <meta property="og:description" content="If you receive a CocoaPods error such as: ...ruby/2.6.0/gems/ffi-1.15.5/lib/ffi_c.">
+    <meta property="og:url" content="https://catalyst.conductive.ai/contest-setup/">
+    <meta property="og:title" content="How to Set Up Your First Contest | Conductive Catalyst SDK">
+    <meta property="og:description" content="Use the SceneToShowButton field to set where the Conductive Button appears in your game.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://catalyst.conductive.ai/troubleshooting-the-sdk/">
-    <meta property="twitter:title" content="Troubleshooting the SDK | Conductive Catalyst SDK">
-    <meta property="twitter:description" content="If you receive a CocoaPods error such as: ...ruby/2.6.0/gems/ffi-1.15.5/lib/ffi_c.">
+    <meta property="twitter:url" content="https://catalyst.conductive.ai/contest-setup/">
+    <meta property="twitter:title" content="How to Set Up Your First Contest | Conductive Catalyst SDK">
+    <meta property="twitter:description" content="Use the SceneToShowButton field to set where the Conductive Button appears in your game.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -182,70 +182,221 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="mac-m1" class="break-words">
+<doc-anchor-target id="how-to-set-up-your-first-contest" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#mac-m1">#</doc-anchor-trigger>
-        <span>Mac M1</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-to-set-up-your-first-contest">#</doc-anchor-trigger>
+        <span>How to Set Up Your First Contest</span>
     </h1>
 </doc-anchor-target>
 <div class="-mt-3 mb-12 flex flex-wrap text-sm text-gray-400 dark:text-dark-350 items-center">
-    <div class="flex items-center shrink-0">Published&nbsp;<span>2023-08-02</span></div>
+    <div class="flex items-center shrink-0">Published&nbsp;<span>2023-11-16</span></div>
 </div>
 
-<doc-anchor-target id="building-for-ios--xcode">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#building-for-ios--xcode">#</doc-anchor-trigger>
-        <span><strong>Building for iOS / XCode</strong></span>
-    </h2>
+<doc-anchor-target id="conductive-button">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#conductive-button">#</doc-anchor-trigger>
+        <span>Conductive Button</span>
+    </h3>
 </doc-anchor-target>
-<p>If you receive a CocoaPods error such as: <code v-pre>...ruby/2.6.0/gems/ffi-1.15.5/lib/ffi_c.bundle' (mach-o file, but is an incompatible architecture (have 'arm64', need 'x86_64')),</code>
-This means you have <code v-pre>ffi</code> built for <code v-pre>arm64</code> but not <code v-pre>x86_64</code> architecture.
-Make sure you have Developer Mode enabled on your iOS device: <code v-pre>Settings → Privacy → Developer mode → on</code>
-Then, do the following:</p>
-<p>(1) Install llvm:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">arch -arm64 brew install llvm
-export LDFLAGS=&quot;-L/opt/homebrew/opt/llvm/lib&quot;
-export CPPFLAGS=&quot;-I/opt/homebrew/opt/llvm/include&quot;</code></pre>
-</doc-codeblock></div>
-<p>(2) Uninstall ffi:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">sudo gem uninstall ffi</code></pre>
-</doc-codeblock></div>
-<p>(3) If prompted, uninstall ALL versions. install ffi gem for x86_64:</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">sudo arch -x86_64 gem install ffi`</code></pre>
-</doc-codeblock></div>
+<p>Use the <strong>SceneToShowButton</strong> field to set where the Conductive Button appears in your game. We recommend showing the button in a lobby screen or main menu.</p>
+<p>The Conductive Button, which will be featured in-game, is part of the <code v-pre>CatalystSDK.prefab</code>. Out of the box, it will feature an image, along with a countdown clock that indicates when your active contest will end. The button also supports badges that notify players when a contest ends and if they won a prize for the contest period. If your team has suggestions on notifications that can better inform your players about the contest status or rewards, please get in touch with Conductive.ai. We are constantly making improvements to Conductive Catalyst SDK, and your feedback is valuable.</p>
+<p>We understand that resolutions and formats need to be adjusted on a per-game basis, so the button has its own canvas. While properties like resolution and size can be adjusted, we recommend keeping other elements unchanged, as a static button with no countdown might result in lower engagement or a confused player base.</p>
+<doc-anchor-target id="player-engagement-mechanics">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#player-engagement-mechanics">#</doc-anchor-trigger>
+        <span>Player Engagement Mechanics</span>
+    </h3>
+</doc-anchor-target>
+<p><strong>Funding the Master Wallet</strong></p>
+<p><strong>Stablecoins Supported:</strong></p>
 <ul>
-<li>Reference: <a href="https://stackoverflow.com/questions/66644365/cocoapods-on-m1-apple-silicon-fails-with-ffi-wrong-architecture">https://stackoverflow.com/questions/66644365/cocoapods-on-m1-apple-silicon-fails-with-ffi-wrong-architecture</a></li>
+<li>USDC &amp; USDT (ERC-20)</li>
+<li>USDC &amp; USDT (Polygon)</li>
+<li>USDT (BNB)</li>
 </ul>
-<doc-anchor-target id="issues-building-for-ios">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#issues-building-for-ios">#</doc-anchor-trigger>
-        <span>Issues building for iOS</span>
-    </h2>
+<p><strong>Purpose:</strong> These stablecoins can be utilized as rewards.</p>
+<doc-anchor-target id="catalyst-account">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#catalyst-account">#</doc-anchor-trigger>
+        <span>Catalyst Account:</span>
+    </h3>
+</doc-anchor-target>
+<p><strong>Purpose:</strong> This account is crucial for processing on-network operations.</p>
+<p><strong>Scenario 1: Deposit ETH in preparation for creating a contest on the Ethereum network.</strong></p>
+<p>ETH will be used to cover any gas fees associated with transactions such as sending stablecoin rewards directly to players.</p>
+<doc-anchor-target id="buying-eth-on-a-centralized-cryptocurrency-exchange">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#buying-eth-on-a-centralized-cryptocurrency-exchange">#</doc-anchor-trigger>
+        <span>Buying ETH on a centralized cryptocurrency exchange:</span>
+    </h3>
 </doc-anchor-target>
 <ul>
-<li>Be sure to disable <code v-pre>bitcode</code></li>
-<li>Be sure to remove <code v-pre>Quoted Include</code> in Framework Header to no</li>
+<li>Start by visiting a centralized cryptocurrency exchange, such as <a href="https://www.coinbase.com/">Coinbase</a>, and creating an account.</li>
+<li>Follow the exchange&#x27;s step-by-step instructions for buying ETH. <a href="https://www.coinbase.com/how-to-buy/ethereum">Here is Coinbase&#x27;s walkthrough.</a></li>
+<li>When the purchase is complete, you will see your ETH balance in your Coinbase Wallet Balance.</li>
 </ul>
+<doc-anchor-target id="obtaining-your-catalyst-account-wallet-address">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#obtaining-your-catalyst-account-wallet-address">#</doc-anchor-trigger>
+        <span>Obtaining your Catalyst Account wallet address:</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Visit the Catalyst Dashboard.</li>
+<li>In the upper right, click on <strong>Fund Project</strong>.</li>
+<li>Copy your wallet address, which is a string of alphanumeric characters starting with <strong>0x</strong>.</li>
+<li>Set this wallet address aside. You will need it when you withdraw ETH from your cryptocurrency exchange.</li>
+</ul>
+<doc-anchor-target id="sending-eth-to-your-catalyst-account-master-wallet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#sending-eth-to-your-catalyst-account-master-wallet">#</doc-anchor-trigger>
+        <span>Sending ETH to your Catalyst Account Master Wallet:</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Sign in to your centralized cryptocurrency exchange of choice. In this example, we&#x27;ll proceed with the assumption that you are using <a href="https://www.coinbase.com/">Coinbase</a>.</li>
+<li>Click the Trading tab.</li>
+<li>Under Wallet Balance, select Withdraw.</li>
+<li>Search for ETH.</li>
+<li>Choose the withdrawal method: in the <strong>To</strong> field, enter your Catalyst Account Master wallet address.
+<ul>
+<li>Confirm you&#x27;re withdrawing ETH into the correct address.</li>
+</ul>
+</li>
+<li>Enter the amount of ETH you&#x27;d like to send to your Catalyst Account Master Wallet.
+<ul>
+<li>You may need to enter two-step verification before completing the withdrawal.</li>
+</ul>
+</li>
+<li>Note that you will need to reserve a small amount of ETH to pay network fees (also called gas fees) for the withdrawal.</li>
+</ul>
+<p><strong>Scenario 2: Deposit MATIC in preparation for creating a contest on the Polygon network.</strong></p>
+<p>MATIC will be used to cover any gas fees associated with transactions such as sending stablecoin rewards directly to players.</p>
+<doc-anchor-target id="buying-matic-on-a-centralized-cryptocurrency-exchange">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#buying-matic-on-a-centralized-cryptocurrency-exchange">#</doc-anchor-trigger>
+        <span>Buying MATIC on a centralized cryptocurrency exchange:</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Start by visiting a centralized cryptocurrency exchange, such as <a href="https://www.coinbase.com/">Coinbase</a>, and creating an account.</li>
+<li>Follow the exchange&#x27;s step-by-step instructions for buying MATIC. <a href="https://www.coinbase.com/how-to-buy/polygon">Here is Coinbase&#x27;s walkthrough.</a></li>
+<li>When the purchase is complete, you will see your MATIC balance in your Coinbase Wallet Balance.</li>
+</ul>
+<doc-anchor-target id="obtaining-your-catalyst-account-wallet-address-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#obtaining-your-catalyst-account-wallet-address-1">#</doc-anchor-trigger>
+        <span>Obtaining your Catalyst Account wallet address:</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Visit the Catalyst Dashboard.</li>
+<li>In the upper right, click on <strong>Fund Project</strong>.</li>
+<li>Copy your wallet address, which is a string of alphanumeric characters starting with <strong>0x</strong>.</li>
+<li>Set this wallet address aside. You will need it when you withdraw MATIC from your cryptocurrency exchange.</li>
+</ul>
+<doc-anchor-target id="sending-matic-to-your-catalyst-account-master-wallet">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#sending-matic-to-your-catalyst-account-master-wallet">#</doc-anchor-trigger>
+        <span>Sending MATIC to your Catalyst Account Master Wallet:</span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li>Sign in to your centralized cryptocurrency exchange of choice. In this example, we&#x27;ll proceed with the assumption that you are using <a href="https://www.coinbase.com/">Coinbase</a>.</li>
+<li>Click the Trading tab.</li>
+<li>Under Wallet Balance, select Withdraw.</li>
+<li>Search for MATIC.</li>
+<li>Choose the withdrawal method: in the <strong>To</strong> field, enter your Catalyst Account Master wallet address.
+<ul>
+<li>Confirm you&#x27;re withdrawing MATIC into the correct address.</li>
+</ul>
+</li>
+<li>Enter the amount of MATIC you&#x27;d like to send to your Catalyst Account Master Wallet.
+<ul>
+<li>You may need to enter two-step verification before completing the withdrawal.</li>
+</ul>
+</li>
+<li>Note that you will need to reserve a small amount of MATIC to pay network fees (also called gas fees) for the withdrawal.</li>
+</ul>
+<p><strong>Creating a Reward Group:</strong></p>
+<p><strong>Objective:</strong> Set up a reward pool or distribution group for specific players or activities.</p>
+<p><strong>Procedure:</strong> Send your desired amount of ERC-20 tokens (such as USDC or USDT) to the designated reward group address or through the specified platform interface.</p>
+<p><em><strong>Note:</strong> Before transferring any funds, always ensure that you’re using the correct and official addresses or methods to prevent any loss of assets. All gas fees will be paid for by the developer from the Master Wallet.</em></p>
+<doc-anchor-target id="setting-up-and-customizing-reward-groups-and-rewards">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#setting-up-and-customizing-reward-groups-and-rewards">#</doc-anchor-trigger>
+        <span><strong>Setting up and customizing reward groups and rewards</strong></span>
+    </h3>
+</doc-anchor-target>
+<p>Upon registering on the Conductive.ai platform, it is crucial to set up and personalize your reward groups and the rewards.</p>
+<p>This entails defining various reward categories, which include leaderboards and quests.</p>
+<p>To create a leaderboard, you will have to set up the ranks and define the prizes that players will receive when they achieve those ranks.</p>
+<p>Here’s how to setup a leaderboard:</p>
+<ol>
+<li>Give Conductive.ai a leaderboard API endpoint</li>
+<li>
+<ol start="2">
+<li>Speak with a Conductive.ai representative to share the value you want to track that determine ordinal placement.</li>
+</ol>
+</li>
+<li>Tell Conductive.ai how we can retrieve user data from your leaderboard data, and the timestamp</li>
+<li>This will allow us to configure your unique leaderboard for Conductive.ai services</li>
+</ol>
+<doc-anchor-target id="implementing-and-managing-contests-and-leaderboards">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#implementing-and-managing-contests-and-leaderboards">#</doc-anchor-trigger>
+        <span><strong>Implementing and managing contests and leaderboards</strong></span>
+    </h3>
+</doc-anchor-target>
+<p>To foster a competitive spirit and maintain high engagement levels, Conductive.ai offers integrated tools for implementing and managing contests and leaderboards developed by the game developer with ease. Conductive.ai can read a game&#x27;s leaderboard and extract data to prove winners and give those winners rewards.</p>
+<p>Developers have the flexibility to set up periodic contests linked to an in-game leaderboard.  These features track player performances and rankings. The management process is iterative, requiring updates based on player feedback. The aim is to ensure fairness and make necessary adjustments over time to sustain a lively and engaging gaming atmosphere.</p>
+<doc-anchor-target id="catalyst-dashboard">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#catalyst-dashboard">#</doc-anchor-trigger>
+        <span><strong>Catalyst Dashboard</strong></span>
+    </h3>
+</doc-anchor-target>
+<p>From the Catalyst Dashboard, developers will be able to carry out a wide range of actions to enhance the gaming experience and foster greater player engagement.</p>
+<p>Here’s a breakdown of the functionalities available:</p>
+<ul>
+<li><strong>Create Contests:</strong> Set up competitive events to spur engagement and retain players.</li>
+<li><strong>Display Contests</strong>: Showcase ongoing contests vividly to engage players effectively.</li>
+<li><strong>Delete Contests:</strong> Remove contests that are outdated or irrelevant to maintain a streamlined player experience.</li>
+<li><strong>Update Scheduled Contests</strong>: Modify scheduled contests to adapt to changing dynamics or improve engagement. You cannot modify or update a contest after it has gone live.</li>
+<li><strong>Create Reward Groups:</strong> Establish groups with specified rewards to encourage certain player behaviors.</li>
+<li><strong>Display Reward Groups:</strong> Illustrate reward groups prominently to keep players informed and motivated.</li>
+<li><strong>Delete Reward Groups:</strong> Withdraw reward groups that are no longer beneficial or pertinent.</li>
+<li><strong>Update Reward Groups:</strong> Revise reward groups to keep them fresh, relevant, and aligned with your game’s goals.
+<ul>
+<li>Name your reward group (example: Contest #4 Winners!)</li>
+<li>Reward Amount</li>
+<li>Range (i.e: 1–10 = top ten players on leaderboard will split the reward for the contest)</li>
+</ul>
+</li>
+<li><strong>Set Withdraw Limit:</strong> Configure the minimum amount of token rewards a user must accumulate before they can transfer rewards to their wallet.</li>
+<li><strong>Fund Master Wallet:</strong> Ensure a seamless reward distribution process by managing financial resources effectively.</li>
+</ul>
+<p>Through the Conductive.ai dashboard, developers have a centralized hub to manage and optimize the reward systems effectively, encouraging a thriving gaming community centered around continuous engagement and rich rewards. This set of tools is crafted to facilitate not just the creation and management of contests and rewards, but also to visualize and analyze data essential in iterating a successful game development strategy. It is the linchpin in creating a vibrant and responsive gaming ecosystem, enabling a deeper connection between the game and its community.</p>
+<p><strong>Understanding reward transactions and withdrawal thresholds</strong></p>
+<p>An essential aspect of managing the Conductive.ai platform is understanding the dynamics of reward transactions and establishing reasonable withdrawal thresholds. This involves setting a minimum limit of accumulated rewards that players must reach before initiating a withdrawal. These thresholds can be adjusted at any time.</p>
+<p>By having a deep understanding of this, you can maintain a healthy ecosystem where players feel rewarded appropriately while preserving the economic balance of the rewards system. Establishing and communicating these thresholds clearly helps in fostering a transparent and trustful environment, encouraging players to engage more and aim higher in their gaming pursuits.</p>
 
                                 <div class="flex items-center mt-6 mb-6 clear-both">
                                     <span>
                                         <a href="../tags/">
                                             <svg class="inline-block -mb-px mr-1.5 text-blue-500 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" overflow="visible" fill="currentColor"><g><path d="M21.3 9.88l-8.59-8.59C12.52 1.11 12.27 1 12 1H2c-.55 0-1 .45-1 1v10c0 .27.11.52.29.71l8.59 8.58c.57.57 1.32.88 2.12.88s1.55-.31 2.12-.88l7.17-7.17a3.009 3.009 0 00.01-4.24zm-1.42 2.82l-7.17 7.17c-.39.39-1.02.39-1.42 0L3 11.59V3h8.59l8.29 8.29c.39.39.39 1.03 0 1.41z" /><path d="M7.01 6C6.45 6 6 6.45 6 7s.45 1 1 1 1-.45 1-1-.44-1-.99-1z" /></g></svg>
                                         </a>
-                                        <span class="mr-2"><a href="../tags/help/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
-                                    <span>help</span>
+                                        <span class="mr-2"><a href="../tags/walkthrough/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>walkthrough</span>
                                 </a></span>
-                                        <span class="mr-2"><a href="../tags/error/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
-                                    <span>error</span>
+                                        <span class="mr-2"><a href="../tags/engagement/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>engagement</span>
                                 </a></span>
-                                        <span class="mr-2"><a href="../tags/issues/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
-                                    <span>issues</span>
+                                        <span class="mr-2"><a href="../tags/contest/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>contest</span>
                                 </a></span>
-                                        <span class="mr-2"><a href="../tags/troubleshooting/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
-                                    <span>troubleshooting</span>
+                                        <span class="mr-2"><a href="../tags/setup/" class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>setup</span>
                                 </a></span>
                                     </span>
                                 </div>
@@ -257,20 +408,20 @@ export CPPFLAGS=&quot;-I/opt/homebrew/opt/llvm/include&quot;</code></pre>
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../sdk-events-examples/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../troubleshooting-the-sdk/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">SDK Events Examples</span>
+                                                <span class="block mt-1">Troubleshooting the SDK</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../contest-setup/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../changelog/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">How to Set Up Your First Contest</span>
+                                                <span class="block mt-1">Changelog</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -314,6 +465,6 @@ export CPPFLAGS=&quot;-I/opt/homebrew/opt/llvm/include&quot;</code></pre>
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Troubleshooting the SDK", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "How to Set Up Your First Contest", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
