@@ -7,7 +7,7 @@ order: 3
 date: 2023-11-16
 ---
 
-### **Player Journey**
+### Player Journey
 
 In building a game integrated with the Conductive.ai platform, understanding the player journey is paramount to achieving a user-centric design that not only entertains but also retains. The following overview of the player journey was crafted to give you, the developer, a meticulous grasp of the paths your users will navigate, helping you shape a gaming experience that is intuitive, rewarding, and deeply engaging.
 
@@ -21,7 +21,7 @@ Here’s an overview of the player journey when a gaming platform integrates Con
 
 Let’s walk through the key facets of the player journey to aid in your endeavor of crafting a gaming environment where every player feels valued, engaged, and secure in their interactions and transactions facilitated through the Conductive.ai platform.
 
-### **1. Game Interaction**
+### 1. Game Interaction
 
 **Getting started with the game (installing and setting up)**
 
@@ -34,7 +34,7 @@ An integral part of the Conductive.ai gaming experience is the reward system. Us
 
 This empowers users to strategize and make the most out of their gaming experience, with a rich rewards system that is both engaging and rewarding. By mastering the rewards dynamics, users can enhance their gaming journey to new, exciting levels.
 
-### **2. Engagement with Catalyst Rewards**
+### 2. Engagement with Catalyst Rewards
 
 **Engaging with leaderboards and contests**
 
@@ -53,7 +53,7 @@ Stablecoins were chosen for the following reasons:
 - The most efficient remittance instrument
 - Directly spendable (online purchases, POS)
 
-### **3. Blockchain Interactions**
+### 3. Blockchain Interactions
 
 **Understanding withdrawal thresholds and how to off-ramp assets to an external wallet**
 

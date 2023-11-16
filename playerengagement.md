@@ -97,7 +97,7 @@ MATIC will be used to cover any gas fees associated with transactions such as se
 
 ***Note:** Before transferring any funds, always ensure that you’re using the correct and official addresses or methods to prevent any loss of assets. All gas fees will be paid for by the developer from the Master Wallet.*
 
-### **Setting up and customizing reward groups and rewards**
+### Setting up and customizing reward groups and rewards
 
 Upon registering on the Conductive.ai platform, it is crucial to set up and personalize your reward groups and the rewards.
 
@@ -113,13 +113,13 @@ Here’s how to setup a leaderboard:
 4. This will allow us to configure your unique leaderboard for Conductive.ai services
 
 
-### **Implementing and managing contests and leaderboards**
+### Implementing and managing contests and leaderboards
 
 To foster a competitive spirit and maintain high engagement levels, Conductive.ai offers integrated tools for implementing and managing contests and leaderboards developed by the game developer with ease. Conductive.ai can read a game's leaderboard and extract data to prove winners and give those winners rewards.
 
 Developers have the flexibility to set up periodic contests linked to an in-game leaderboard.  These features track player performances and rankings. The management process is iterative, requiring updates based on player feedback. The aim is to ensure fairness and make necessary adjustments over time to sustain a lively and engaging gaming atmosphere.
 
-### **Catalyst Dashboard**
+### Catalyst Dashboard
 
 From the Catalyst Dashboard, developers will be able to carry out a wide range of actions to enhance the gaming experience and foster greater player engagement.
 
