@@ -1,6 +1,6 @@
 ---
-title: Appendix: Player Journey
-route: /player-engagement
+title: Player Journey
+route: /player-journey
 tags: ['player', 'engagement', 'user journey', 'appendix']
 layout: default
 order: 3
