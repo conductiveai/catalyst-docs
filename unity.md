@@ -69,14 +69,14 @@ This should take you to the project settings below. Copy your API key provided f
 
 	![](https://github.com/conductiveai/catalyst-docs/blob/main/.github/unity-prefab-canvas.png?raw=true)
 
-6. Please open the `CatalystSDK.cs` script in the `CatalystSDK` folder. Then, edit this line of code to synchronize player IDs with Catalyst services.
+6. Open the `CatalystSDK.cs` script located in the `CatalystSDK` folder. In this script, you'll find a line of code designated for identifying players who will utilize Catalyst services. 
 
 ```csharp
 //Set your game's user id here to synchronize data with Catalyst services
 SetExternalId("USER_ID");
 ```
 
-Please refer to this page for more information: [Sending Events in Catalyst](https://catalyst.conductive.ai/sending-events-in-catalyst/)
+It's crucial to modify this line by replacing the placeholder "USER_ID" with your specific method for retrieving player IDs. This step ensures that player identification is properly integrated with the Catalyst services.
 
 ### That’s it! 🚀
 
