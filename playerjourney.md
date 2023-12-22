@@ -3,7 +3,7 @@ title: Player Journey
 route: /player-journey
 tags: ['player', 'engagement', 'user journey', 'appendix']
 layout: default
-order: 3
+order: 6
 date: 2023-11-16
 ---
 

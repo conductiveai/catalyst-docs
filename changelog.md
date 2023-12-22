@@ -3,7 +3,7 @@ title: Changelog
 route: /changelog
 tags: ['versions', 'changes', 'changelog']
 layout: default
-order: 2
+order: 4
 date: 2023-08-02
 ---
 # Changelog

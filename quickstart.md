@@ -3,7 +3,7 @@ title: Getting Started
 route: /quick-start
 tags: ['getting started', 'quick', 'installation']
 layout: default
-order: 10
+order: 14
 date: 2023-08-02
 ---
 

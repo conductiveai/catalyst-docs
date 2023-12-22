@@ -3,7 +3,7 @@ title: Catalyst Account Setup
 route: /account-setup
 tags: ['account', 'login', 'registration', 'api', 'key']
 layout: default
-order: 9
+order: 13
 date: 2023-11-16
 ---
 

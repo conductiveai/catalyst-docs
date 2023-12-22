@@ -3,7 +3,7 @@ title: Sending Events in Catalyst
 route: /sending-events-in-catalyst
 tags: ['events', 'analytics', 'capture', 'identity']
 layout: default
-order: 7
+order: 10
 date: 2023-11-16
 ---
 # Sending Events in Catalyst

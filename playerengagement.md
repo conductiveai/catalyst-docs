@@ -3,7 +3,7 @@ title: How to Set Up Your First Contest
 route: /contest-setup
 tags: ['walkthrough', 'engagement', 'contest', 'setup']
 layout: default
-order: 4
+order: 7
 date: 2023-11-16
 ---
 
