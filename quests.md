@@ -15,7 +15,7 @@ In order to effectively use the features of Catalyst, it is important to identif
 !!!
 
 ## AdView
-This method is used to track with a player views an advertisment in your game. You can pass an id for the ad as a parameter.
+This method is used to track with a player views an advertisment in your game. For richer data, you can pass an id for the ad as a parameter.
 
 ### Example Usage
 ```csharp
@@ -52,7 +52,7 @@ This method is used to track when a player spends standard or soft currency. You
 
 ### Example Usage
 ```csharp
-CatalystSDK.Instance.CurrencySpend(int amount, string currencyName);
+CatalystSDK.Instance.CurrencySpend(int amount);
 ```
 ### Best Practices
 Place this method in your game when a player spends soft currency.
@@ -63,21 +63,21 @@ This method is used to track when a player spends premium currency. You can pass
 
 ### Example Usage
 ```csharp
-CatalystSDK.Instance.PremiumCurrencySpend(int amount, string currencyName);
+CatalystSDK.Instance.PremiumCurrencySpend(int amount);
 ```
 ### Best Practices
 Place this method in your game when a player spends premium currency.
 
 ## LevelEvent
 
-This method is used to track when a player level increases in a game. It can also be used to track overall player progress in a stage or level based game if the method is called when a player completes a stage or level for the first time.
+This method is used to track when a player level increases in a game. It can also be used to track overall player progress in a stage or level based game.
 
 ### Example Usage
 ```csharp
 CatalystSDK.Instance.LevelEvent();
 ```
 ### Best Practices
-Place this method in your game when a player completes a level for the first time or increases their player level.
+Place this method in your game when a player completes a level or increases their player level.
 
 ## ScoreEvent
 
@@ -110,4 +110,9 @@ This method allows developers to create custom events and create custom quests. 
 CatalystSDK.Instance.QuestEvent(string eventName, int? value, params KeyValuePair<string, object>[] eventData);
 ```
 
-Creating custom quests is a way to deeply integrate the Conductive Catalyst SDK for your game and improve player LTV based on your game's unique loop.
+Creating custom quests is a way to deeply integrate the Conductive Catalyst SDK for your game and improve player LTV based on your game's unique loop. Custom quests can be easily created with one line of code like this:
+
+#### Example Usage
+```csharp
+CatalystSDK.Instance.QuestEvent("MyCustomQuest");
+```
